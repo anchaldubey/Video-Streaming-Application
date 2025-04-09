@@ -24,7 +24,7 @@ const upload = multer({storage:storage})
 
 app.use(
     cors({
-        origin: ["https://backend-3pou.onrender.com", "https://localhost:5173", "https://vis-b1z9.onrender.com"],
+        origin: ["http://localhost:3000", "http://localhost:5173"],
         credentials: true
     })
 )
@@ -67,7 +67,7 @@ app.post('/upload', upload.single("file"), function(req, res){
         console.log(`stdout: ${stdout}`)
         console.log(`stderr: ${stderr}`)
 
-        const videoUrl = `https://backend-3pou.onrender.com/uploads/testVideo/${lessonId}/index.m3u8`;
+        const videoUrl = `http://localhost:8000/uploads/testVideo/${lessonId}/index.m3u8`;
 
         res.json({
             message: "Video Converted to HLS format",
