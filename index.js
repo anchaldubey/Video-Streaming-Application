@@ -24,7 +24,7 @@ const upload = multer({storage:storage})
 
 app.use(
     cors({
-        origin: ["http://localhost:3000", "http://localhost:5173"],
+        origin: ["https://vis-b1z9.onrender.com"],
         credentials: true
     })
 )
