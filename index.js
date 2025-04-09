@@ -67,7 +67,7 @@ app.post('/upload', upload.single("file"), function(req, res){
         console.log(`stdout: ${stdout}`)
         console.log(`stderr: ${stderr}`)
 
-        const videoUrl = `http://localhost:8000/uploads/testVideo/${lessonId}/index.m3u8`;
+        const videoUrl = `https://backend-3pou.onrender.com/uploads/testVideo/${lessonId}/index.m3u8`;
 
         res.json({
             message: "Video Converted to HLS format",
